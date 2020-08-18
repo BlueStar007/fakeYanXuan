@@ -2,19 +2,19 @@
         <div class="con">
             <mt-tabbar v-model="selected">
             <mt-tab-item id="tab1">
-                 <img class="test" src="../assets/images/hot.png" alt="">
+                 <i class="iconfont icon-shouye"></i>
                  <router-link :to="{name: 'test'}">首页</router-link>
             </mt-tab-item>
             <mt-tab-item id="tab2">
-                <img slot="icon"  src="">
+                <i class="iconfont icon-fenlei"></i>
                 分类
             </mt-tab-item>
             <mt-tab-item id="tab3">
-                <img slot="icon" src="">
+                <i class="iconfont icon-gouwuche"></i>
                 购物车
             </mt-tab-item>
             <mt-tab-item id="tab4">
-                <img slot="icon" class="iconfont icon-shouye" src="">
+                <i class="iconfont icon-geren"></i>
                 我的
             </mt-tab-item>
             </mt-tabbar>            
@@ -39,5 +39,9 @@ export default {
 .test{ 
     width: 40px;
     height: 40px;
+}
+.iconfont{
+    display: block;
+    margin: 8px auto;
 }
 </style>
