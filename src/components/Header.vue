@@ -6,11 +6,10 @@
        <div class="end"><a href="">登录</a></div>
     </div>
     <div class="item">
-            <mt-navbar v-model="selected">
-                    <mt-tab-item class="tabItem" v-for="(i,index) in list" :key="index"  :id="index">{{i}}</mt-tab-item>
+            <mt-navbar  v-model="selected">
+                    <mt-tab-item :class="{'is-selected': index==selected}" class="tabItem" v-for="(i,index) in list" :key="index"  :id="index">{{i}}</mt-tab-item>
             </mt-navbar>
-
-
+            
     </div>
 </div>
 </template>

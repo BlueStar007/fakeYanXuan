@@ -1,0 +1,13 @@
+.red {
+    color: #DD1A21;
+}
+
+.is-selected {
+    color: #DD1A21 !important;
+}
+
+.hr {
+    height: 10px;
+    background-color: #EAEAEA;
+    margin: 10px 0;
+}
