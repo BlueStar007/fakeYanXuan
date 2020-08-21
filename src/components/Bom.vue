@@ -1,6 +1,6 @@
 <template>
         <div class="con">
-            <mt-tabbar v-model="selected">
+            <mt-tabbar fixed="true" v-model="selected">
             <mt-tab-item id="tab1">
                  <i class="iconfont icon-shouye"></i>
                  <router-link :to="{name: 'test'}">首页</router-link>

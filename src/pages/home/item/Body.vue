@@ -28,13 +28,19 @@
                             <div class="pinIt">
                                 <div class="pinIone">{{item.name}}</div>
                                 <div class="pinItwo red">{{item.price+item.yuan}}</div>
-                                <div class="pinIthree">{{item.tagNew}}</div>
+                                <div class="pinIthree"><span v-show="item.tagNew!=undefined">{{item.tagNew}}</span></div>
                             </div>
                     </div>
                     
                 </div>
         </div>
         <!-- 品牌块 -->
+        
+        <div class="hr"></div>
+        <!-- 横向滚动条 -->
+            
+        <!-- 横向滚动条 -->
+
 
 </div>
 </template>
@@ -51,6 +57,7 @@ export default {
         },
         pinList(){
             return this.list.modCon.provideGoods.items
+            
         }
     },
     data(){
@@ -97,7 +104,7 @@ export default {
 .pinI{
     width: 48%;
     height: 120px;
-    background-color: white;
+    background-color: rgb(240, 239, 239);
     position: relative;
 }
 .pinI:nth-child(1){
@@ -115,7 +122,7 @@ export default {
     margin-bottom: 10px;
 }
 .pinI img{
-    width: 70%;
+    width: 110%;
     height: auto;
 }
 .pinIt{
@@ -132,9 +139,14 @@ export default {
     font-size: 0.9rem;
 }
 .pinIthree{
-    margin: 3px 0;
-    border: 1px solid #DD1A21;
+    margin: 1px 0;
+}
+.pinIthree span{
+    border: 1px solid #c18500;
     border-radius: 5px;
     width: 100%;
+    color: #c18500;
+    padding: 1px 5px;
+    font-size: 0.7rem;
 }
 </style>
