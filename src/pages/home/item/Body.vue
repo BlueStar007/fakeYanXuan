@@ -25,6 +25,7 @@
                 <div class="pinR">
                     <div class="pinI" v-for="(item,index) in pinList" :key="index+10">
                             <img :src="item.imgSrc" alt="">
+                            
                             <div class="pinIt">
                                 <div class="pinIone">{{item.name}}</div>
                                 <div class="pinItwo red">{{item.price+item.yuan}}</div>
@@ -36,9 +37,14 @@
         </div>
         <!-- 品牌块 -->
         
-        <div class="hr"></div>
+        <!-- <div class="hr"></div> -->
         <!-- 横向滚动条 -->
-            
+        <Item :list='this.list.modCon.hotGoods' />
+        <Item :list='this.list.modCon.newGoods' />
+        <!-- <Item :list='this.list.modCon.topicGoods' /> -->
+        <Item class="last" :list='this.list.modCon.provideGoods'/>
+        
+        
         <!-- 横向滚动条 -->
 
 
@@ -47,7 +53,11 @@
 
 <script>
 import {getOther} from '../../../../server/getCom'
+import Item from './Item'
 export default {
+    components:{
+        Item
+    },
     computed:{
         swiperList(){
             return this.list.banner
@@ -74,6 +84,9 @@ export default {
 </script>
 
 <style scoped>
+.last{
+    margin-bottom: 50px;
+}
 .swipeC{
   height: 188px;
   margin-top: 5px;
@@ -100,12 +113,14 @@ export default {
     justify-content: center;
     flex-wrap: wrap;
     margin: 10px 0;
+    
 }
 .pinI{
     width: 48%;
     height: 120px;
     background-color: rgb(240, 239, 239);
     position: relative;
+    overflow: hidden;
 }
 .pinI:nth-child(1){
     margin-right: 10px;
