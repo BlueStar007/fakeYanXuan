@@ -11,6 +11,26 @@ let routes = [
         component: () =>
             import ('../pages/home/Home'),
     },
+    {
+        path: '/my',
+        name: 'my',
+        component: () =>
+            import ('../pages/my/My'),
+    },
+    {
+        path: '/gouwuche',
+        name: 'gouwuche',
+        component: () =>
+            import ('../pages/gouwuche/Gouwuche'),
+    },
+    {
+        path: '/fenlei',
+        name: 'fenlei',
+        component: () =>
+            import ('../pages/fenlei/Fenlei'),
+    },
+
+
 
 
 ]
