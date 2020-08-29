@@ -16,17 +16,25 @@
             <!-- 左边 -->
             <!-- 右边 -->
             <div class="right">
-                    <div class="Rimg"></div>
+                    <div :style="{ backgroundImage: `url(${bgImg})`}" class="Rimg"></div>
             </div>
             <!-- 右边 -->
+        </div>
+        <div>
+            <Bom/>
         </div>
 </div>
 </template>
 
 <script>
+import Bom from '../../components/Bom'
 export default {
+    components: {
+        Bom
+    },
     data(){
         return {
+            bgImg: "http://yanxuan.nosdn.127.net/8feb4f8712ae2f2ed6c6d7e5df1a0043.jpg?quality=85&thumbnail=750x0&imageView",
             selected: ''
         }
     }
@@ -36,11 +44,9 @@ export default {
 <style scoped>
 .Rimg{
     width: 100%;
-    height: 6rem;
+    height: 8rem;
     border-radius: 6px;
-    background-size: 80%;
-    background-position-y: center;
-    background:url("http://yanxuan.nosdn.127.net/8feb4f8712ae2f2ed6c6d7e5df1a0043.jpg?quality=85&thumbnail=750x0&imageView");
+    background-size: cover;
 }
 
 .Lc{

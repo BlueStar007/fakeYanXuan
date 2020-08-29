@@ -1,19 +1,19 @@
 <template>
         <div class="con">
-            <mt-tabbar fixed="true" v-model="selected">
-            <mt-tab-item id="tab1">
+            <mt-tabbar fixed="true" v-model="seIndex">
+            <mt-tab-item id="index">
                  <i class="iconfont icon-shouye"></i>
                  <router-link :to="{name: 'home'}">首页</router-link>
             </mt-tab-item>
-            <mt-tab-item id="tab2">
+            <mt-tab-item id="fenlei" >
                 <i class="iconfont icon-fenlei"></i>
                 <router-link :to="{name: 'fenlei'}">分类</router-link>
             </mt-tab-item>
-            <mt-tab-item id="tab3">
+            <mt-tab-item id="gouwuche">
                 <i class="iconfont icon-gouwuche"></i>
                 <router-link :to="{name: 'gouwuche'}">购物车</router-link>
             </mt-tab-item>
-            <mt-tab-item id="tab4">
+            <mt-tab-item id="me">
                 <i class="iconfont icon-geren"></i>
                 <router-link :to="{name: 'my'}">我的</router-link>
             </mt-tab-item>
@@ -29,9 +29,11 @@
 export default {
        data() {
            return {
-               selected: 'tab1'
+               seIndex: 'index'
            }
        },
+       
+       
 }
 </script>
 
