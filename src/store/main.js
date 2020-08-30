@@ -5,7 +5,7 @@ import getters from './getters'
 Vue.use(Vuex)
 let store = new Vuex.Store({
     state: {
-
+        Flist: {} ///分类列表
     },
     mutations,
     getters

@@ -25,8 +25,9 @@ export default {
         }
     },
     created(){
+        let that=this;
         getOther().then(res=>{
-            console.log(res);
+            that.$store.store.commit('setFlist',res)
         });
     }
 }
