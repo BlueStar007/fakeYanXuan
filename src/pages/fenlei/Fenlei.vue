@@ -7,9 +7,9 @@
             <!-- 左边 -->
             <div class="left">
                     <mt-navbar class="Lc" v-model="selected">
-                            <mt-tab-item id="1">选项一</mt-tab-item>
-                            <mt-tab-item id="2">选项二</mt-tab-item>
-                            <mt-tab-item id="3">选项三</mt-tab-item>
+                            <mt-tab-item :class="{'is-selected': selected=='one'}" id="one">选项一</mt-tab-item>
+                            <mt-tab-item  id="two">选项二</mt-tab-item>
+                            <mt-tab-item id="three">选项三</mt-tab-item>
                      </mt-navbar>
 
             </div>
@@ -20,7 +20,7 @@
             </div>
             <!-- 右边 -->
         </div>
-        <div>
+        <div class="bom">
             <Bom/>
         </div>
 </div>
@@ -35,7 +35,7 @@ export default {
     data(){
         return {
             bgImg: "http://yanxuan.nosdn.127.net/8feb4f8712ae2f2ed6c6d7e5df1a0043.jpg?quality=85&thumbnail=750x0&imageView",
-            selected: ''
+            selected: 'one'
         }
     }
 }
@@ -84,5 +84,8 @@ export default {
 }
 .search i{
     margin-right: 8px;
+}
+.bom{
+    z-index: 1;
 }
 </style>
