@@ -21,7 +21,7 @@
             <!-- 右边 -->
         </div>
         <div class="bom">
-            <Bom/>
+            <Bom index="fenlei"/>
         </div>
 </div>
 </template>

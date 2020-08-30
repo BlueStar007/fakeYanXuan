@@ -3,7 +3,7 @@
     <div class="con">
        <div class="logoC"><img src="../assets/images/logo.png" alt=""></div>
        <a href="/search" class="searchC"><i class="iconfont icon-sousuo"></i><span>搜索商品</span></a>
-       <div class="end"><a href="">登录</a></div>
+       <div class="end"><router-link :to="{name : 'my'}">登录</router-link> </div>
     </div>
     <div class="item">
             <mt-navbar  v-model="selected">

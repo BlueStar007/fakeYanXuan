@@ -2,7 +2,7 @@
   <div class="con">
         <Header/>
         <Body/>
-        <Bom/>
+        <Bom index="index"/>
   </div>
 </template>
 
